@@ -95,15 +95,6 @@ public class EmployeeManagement {
     public void test() {
         addEmployee("1", "Mike", "30", "1234567890", "a@gmail.com", 1000, 50, 8000);
         addEmployee("2", "Levi", "40", "9876543210", "b@yahoo.com", 20);
+        addEmployee("3", "Petra", "23", "1357924680", "c@gmail.com", 10);
     }
-
-
-
-
-
-
-
-
-
-
 }
