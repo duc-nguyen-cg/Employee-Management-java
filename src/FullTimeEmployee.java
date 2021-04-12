@@ -1,6 +1,4 @@
-package com.company;
 
-import com.company.Employee;
 
 public class FullTimeEmployee extends Employee {
     private double bonus, fine, salary;
@@ -22,6 +20,6 @@ public class FullTimeEmployee extends Employee {
 
     @Override
     public String toString() {
-        return (super.toString() + "\t Full-time");
+        return (super.toString() + " \t Full-time");
     }
 }

@@ -1,6 +1,3 @@
-package com.company;
-
-import com.company.Employee;
 
 public class PartTimeEmployee extends Employee {
     private double workHours;
@@ -29,6 +26,6 @@ public class PartTimeEmployee extends Employee {
 
     @Override
     public String toString() {
-        return (super.toString() + "\t Part-time");
+        return (super.toString() + " \t Part-time");
     }
 }

@@ -1,43 +1,43 @@
-package com.company;
-
 import java.util.Scanner;
-public class Main {
 
+public class Main {
     public static void main(String[] args) {
-	// write your code here
         Scanner scanner = new Scanner(System.in);
-        EmployeeManagement employeeManagement = new EmployeeManagement();
-        employeeManagement.init();
-        int userChoice;
+        EmployeeManagement company = new EmployeeManagement();
+        company.test();
+
+        int userChoice = -1;
         do {
-            System.out.println("1. Display employee list");
-            System.out.println("2. Add employee");
-            System.out.println("3. List of full-time employees with below-average income");
+            System.out.println();
+            System.out.println("1. Display employees' list");
+            System.out.println("2. Add an employee");
+            System.out.println("3. Display full-time employees receiving below-average payment");
             System.out.println("4. Total payment for part-time employees");
             System.out.println("0. Exit");
+            System.out.println("Enter your choice: ");
             userChoice = scanner.nextInt();
             scanner.nextLine();
             switch (userChoice) {
                 case 1: {
-                    employeeManagement.displayEmployees();
+                    company.displayEmployees();
                     break;
                 }
                 case 2: {
-                    employeeManagement.addEmployeeMenu();
+                    company.addEmployeeMenu();
                     break;
                 }
                 case 3: {
-                    employeeManagement.displayBelowAverageFullTime();
+                    company.displayUnderpaidFullTime();
                     break;
                 }
                 case 4: {
-                    System.out.println(employeeManagement.getTotalPartTimePay());
+                    System.out.println("Total payment for part-time employees is "+company.getTotalPartTimePayment());
                     break;
                 }
                 case 0: {
                     System.exit(0);
                 }
             }
-        }    while (userChoice != 0) ;
+        } while (userChoice != 0);
     }
 }
